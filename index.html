@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>JavaScript Challenge</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to top left, #28b487, #7dd56f);
+    }
+
+    #select-file-btn {
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+      text-align: center;
+      white-space: nowrap;
+      padding-right: 1cm;
+      box-shadow: none;
+    }
+
+    #file-info-table {
+      border-color: #1d3d33;
+      border: 2px solid;
+      padding: 0 16px;
+      border-collapse: collapse;
+      display: none;
+      width: 75%;
+    }
+
+    #file-info-table-head {
+      border: 1px solid;
+    }
+
+    #file-info-table-data {
+      border: 1px solid;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="select-file-btn">
+  </div>
+  <img id="selected-image" style="padding-right: 1cm;">
+  <table id="file-info-table">
+    <thead id="file-info-table-head">
+      <tr>
+        <th>File Name</th>
+        <th>Extension</th>
+        <th>Size [B]</th>
+        <th>Size [kB]</th>
+        <th>Size [MB]</th>
+      </tr>
+    </thead>
+    <tbody id="file-info-table-data">
+    </tbody>
+  </table>
+  <script src="filePicker.js"></script>
+  <script>
+    buttonClass.init('Pick a file', '.png, .jpg');
+    document.getElementById("select-file-btn").appendChild(buttonClass.button);
+  </script>
+</body>
+
+</html>
